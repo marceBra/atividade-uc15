@@ -1,0 +1,139 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* FUNDO */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* CONTAINER */
+.container {
+    width: 95%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+
+    animation: aparecer 0.8s ease;
+}
+
+/* TITULO */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+/* BOTÕES */
+.btn {
+    position: relative;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* HOVER */
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* CLICK */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* TOOLTIP */
+.tooltip {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #ff416c;
+    color: white;
+
+    padding: 7px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.3s;
+    white-space: nowrap;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* SETINHA */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    border-width: 6px;
+    border-style: solid;
+    border-color: #ff416c transparent transparent transparent;
+}
+
+/* MOSTRAR TOOLTIP */
+.btn:hover .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* ANIMAÇÃO */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .btn {
+        padding: 12px;
+        font-size: 13px;
+    }
+}
+button {
+    background: black !important;
+}
