@@ -106,7 +106,7 @@ h1 {
     
     border-width: 6px;
     border-style: solid;
-    border-color: #ff416c transparent transparent transparent;
+    border-color: #62b2e7 transparent transparent transparent;
 }
 
 /* MOSTRAR TOOLTIP */
@@ -133,7 +133,4 @@ h1 {
         padding: 12px;
         font-size: 13px;
     }
-}
-button {
-    background: black !important;
 }

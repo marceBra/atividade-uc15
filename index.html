@@ -29,7 +29,7 @@
 <button class="btn" onclick="atividade15()">Atividade 15<span class="tooltip">Adicionar nomes em lista</span></button>
 <button class="btn" onclick="atividade16()">Atividade 16<span class="tooltip">Contar aprovados</span></button>
 <button class="btn" onclick="atividade17()">Atividade 17<span class="tooltip">Menu interativo de itens</span></button>
-<button class="btn" onclick="atividade18()">Atividade 18<span class="tooltip">Cadastrar pessoas (objeto)</span></button>
+<button class="btn" onclick="atividade18()">Atividade 18<span class="tooltip">Cadastrar pessoas click no F12 para abrir o console (objeto)</span></button>
 <button class="btn" onclick="atividade19()">Atividade 19<span class="tooltip">Buscar nome na lista</span></button>
 <button class="btn" onclick="atividade20()">Atividade 20<span class="tooltip">Sistema com média de alunos</span></button>
 
@@ -306,29 +306,49 @@ function atividade17() {
 }
 
 // ATIVIDADE 18
+
 function atividade18() {
-    let pessoas = [];
-
-    for (let i = 0; i < 3; i++) {
-        pessoas.push({
-            nome: prompt("Nome"),
-            idade: Number(prompt("Idade"))
-        });
+let nomesAtividade18 = ['Marcos','Carlos','Richard','Vinicius','João']
+    let idadesAtividade18 = [22,33,19,22,28]
+ 
+    let dados = []
+ 
+    for (let i = 0; i < 5; i++){
+        dados.push({
+            nome: nomesAtividade18[i],
+            idade: idadesAtividade18[i]
+        })
     }
-
-    console.table(pessoas);
+    console.table(dados);
 }
-
 // ATIVIDADE 19
 function atividade19() {
     let nomes = ["Ana", "Carlos", "João", "Maria"];
-    let busca = prompt("Buscar nome:");
 
-    let encontrado = nomes.includes(busca);
+    let lista = "Nomes disponíveis:\n";
+    for (let i = 0; i < nomes.length; i++) {
+        lista += (i + 1) + " - " + nomes[i] + "\n";
+    }
 
-    alert(encontrado ? "Encontrado" : "Não encontrado");
+    alert(lista);
+
+    let busca = prompt("Digite um nome para buscar:");
+
+    let encontrado = false;
+
+    for (let i = 0; i < nomes.length; i++) {
+        if (nomes[i].toLowerCase() === busca.toLowerCase()) {
+            encontrado = true;
+            break;
+        }
+    }
+
+    if (encontrado) {
+        alert("Nome encontrado na lista!");
+    } else {
+        alert("Nome não encontrado.");
+    }
 }
-
 // ATIVIDADE 20
 function atividade20() {
     let alunos = [];
