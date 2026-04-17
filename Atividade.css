@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* FUNDO */
@@ -35,6 +35,8 @@ h1 {
     text-align: center;
     color: white;
     margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 /* GRID */
@@ -54,7 +56,8 @@ h1 {
     background: linear-gradient(135deg, #ff416c, #ff4b2b);
     color: white;
 
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     cursor: pointer;
 
     transition: 0.3s;
@@ -80,7 +83,7 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
 
-    background: #ff416c;
+    background: #5856d6;
     color: white;
 
     padding: 7px 12px;
@@ -106,7 +109,7 @@ h1 {
     
     border-width: 6px;
     border-style: solid;
-    border-color: #62b2e7 transparent transparent transparent;
+    border-color: #5856d6 transparent transparent transparent;
 }
 
 /* MOSTRAR TOOLTIP */
